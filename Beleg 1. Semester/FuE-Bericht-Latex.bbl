@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{Scholz2014}
+D.~Scholz, {\em Pixelspiele - Modellieren und Simulieren mit zellulären
+  Automaten}.
+\newblock Berlin Heidelberg New York: Springer-Verlag, 2014.
+
+\bibitem{Zellsimulator}
+M.~Krockert and R.~Erzgräber, ``Cell simulator.'' http://krockema.github.io/.
+
+\bibitem{Puliafito}
+A.~Puliafito, ``Collective and single cell behavior in epithelial contact
+  inhibition,'' tech. rep., Kavli Institute for Theoretical Physics, Nov. 2011.
+
+\end{thebibliography}
