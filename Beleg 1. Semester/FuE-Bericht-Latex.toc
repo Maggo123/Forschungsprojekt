@@ -7,12 +7,15 @@
 \contentsline {chapter}{\numberline {6}Mathematisches Modell}{8}
 \contentsline {section}{\numberline {6.1}Beschreibung des Zustandsraumes}{8}
 \contentsline {section}{\numberline {6.2}Beschreibung der Dynamik}{9}
-\contentsline {chapter}{\numberline {7}Biologische Kennzahlen}{11}
-\contentsline {section}{\numberline {7.1}Entnommene Kennzahlen}{11}
-\contentsline {section}{\numberline {7.2}Approximierte Kennzahlen}{11}
-\contentsline {chapter}{\numberline {8}Programmaufbau}{13}
-\contentsline {section}{\numberline {8.1}Eingabeparameter}{13}
-\contentsline {section}{\numberline {8.2}Vergleichsparameter}{14}
-\contentsline {section}{\numberline {8.3}Umrechnung biologischer Kenngr\IeC {\"o}\IeC {\ss }en in Wahrscheinlichkeiten}{14}
-\contentsline {section}{\numberline {8.4}Datengenerierung und Auswertung}{15}
-\contentsline {chapter}{\numberline {9}Ergebnisse und Ausblick}{17}
+\contentsline {chapter}{\numberline {7}Biologische Kennzahlen}{12}
+\contentsline {section}{\numberline {7.1}Entnommene Kennzahlen}{12}
+\contentsline {section}{\numberline {7.2}Approximierte Kennzahlen}{13}
+\contentsline {section}{\numberline {7.3}Umrechnung biologischer Kenngr\IeC {\"o}\IeC {\ss }en in Wahrscheinlichkeiten}{13}
+\contentsline {chapter}{\numberline {8}Programmaufbau}{14}
+\contentsline {section}{\numberline {8.1}Datengenerierung und Auswertung}{15}
+\contentsline {chapter}{\numberline {9}Datenauswertung und Ergebnisse}{16}
+\contentsline {section}{\numberline {9.1}Vergleich der Koloniefl\IeC {\"a}che}{17}
+\contentsline {section}{\numberline {9.2}Vergleich der Kolonieform}{18}
+\contentsline {section}{\numberline {9.3}Vergleich der Zelldichte}{19}
+\contentsline {section}{\numberline {9.4}Vergleich der Zellgr\IeC {\"o}\IeC {\ss }en}{20}
+\contentsline {chapter}{\numberline {10}Ausblick}{22}

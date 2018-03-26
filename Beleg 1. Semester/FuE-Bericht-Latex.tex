@@ -91,7 +91,8 @@ Zellen bilden die kleinste Einheit allen Lebens. Seit ihrer Entdeckung vor über
 Im Rahmen des Forschungs- und Entwicklungsprojekts 2017/2018 des Masterstudiengangs Angewandte Informationstechnologien soll die Frage beantwortet werden, ob sich Zellverhalten mittels eines zellulären Automaten (nachfolgend CA abgekürzt) beschreiben und vor allem erklären lässt. \par
 Ziel des Projektes ist es, aufbauend auf den Ergebnissen eines Vorprojektes einen CA zu entwickeln, der die Wachstums- und Verdrängungsprozesse in der Systembiologie möglichst realistisch abbildet und somit zum Verständnis dieser beitragen kann.\par 
 Mit Hilfe eines funktionsfähigen Automaten könnte man noch unbekannte Korrelationen erkennen, die unter Umständen mit derzeitigen technischen Mitteln nicht messbar sind. Des Weiteren könnte man ihn nutzen um Vorhersagen zu treffen, zum Beispiel wie eine Verletzung heilen wird oder wie ein Tumor sich ausbreitet.\par
-Diese Arbeit schätzt den Forschungsprojektstand nach dem Ersten, der Zwei für die Bearbeitung vorgesehenen Semester, ein. Um einen verständlichen Einstieg in das Thema zu geben, werden zunächst CA im Allgemeinen und damit einhergehende Begrifflichkeiten beschrieben. Anschließend wird ein Überblick über die bereits im Vorfeld dieser Arbeit bestehende Vorarbeit gegeben. Im Kapitel Methodik wird die Herangehensweise an das Projekt beschrieben. Darauf folgt ein Kapitel über die konzeptionellen Vorgaben an den CA. Im nächsten Kapitel wird aus den Vorgaben zunächst ein mathematisches Modell abgeleitet, bevor im nächsten Kapitel dessen programmatische Umsetzung beschrieben wird. Abschließend werden die bei der bisherigen Implementierung gewonnenen Ergebnisse evaluiert und ein Ausblick für das kommende Semester gegeben.
+
+Diese Arbeit schätzt den abschließenden Forschungsprojektstand nach den zwei für die Bearbeitung vorgesehenen Semester ein. Um einen verständlichen Einstieg in das Thema zu geben, werden zunächst CA im Allgemeinen und damit einhergehende Begrifflichkeiten beschrieben. Anschließend wird ein Überblick über die bereits im Vorfeld dieser Arbeit bestehende Vorarbeit gegeben. Im Kapitel Methodik wird die Herangehensweise an das Projekt beschrieben. Darauf folgt ein Kapitel über die konzeptionellen Vorgaben an den CA. Im nächsten Kapitel wird aus den Vorgaben zunächst ein mathematisches Modell abgeleitet, bevor im nächsten Kapitel dessen programmatische Umsetzung beschrieben wird. Abschließend werden die bei der bisherigen Implementierung gewonnenen Ergebnisse evaluiert und ein Ausblick für eine mögliche Weiterarbeit gegeben.
  
 \chapter{Zelluläre Automaten}
 In diesem Kapitel wird das Konzept zellulärer Automaten und aller damit einhergehender Begrifflichkeiten beschrieben.
@@ -117,7 +118,7 @@ Die einzelnen Gitterzellen des Automaten können durch festgelegte Regeln ihren 
 
 Für den Fall, dass eine Gitterzelle am Rand des Spielfelds liegt und somit keine komplette Nachbarschaft innerhalb des Felds besitzt, müssen Randbedingungen definiert werden. Man unterscheidet zwischen abgeschlossenen und periodischen Randbedingungen. Bei einem abgeschlossenen Rand wird davon ausgegangen, dass Randzellen eingeschränkte Nachbarschaften haben und somit weniger Optionen für einen Zustandswechsel. Periodische Ränder hingegen ergänzen die fehlende Nachbarschaft durch Zellen vom gegenüberliegenden Rand. \par
 
-Da wie bereits zu Beginn erwähnt, an die Vorarbeit von zwei Studenten angeknüpft wurde, werden im nächsten Abschnitt deren bisherige Ergebnisse vorgestellt bevor der derzeitige Projektfortschritt beleuchtet wird.
+Da wie bereits zu Beginn erwähnt, an die Vorarbeit von zwei Studenten angeknüpft wurde, werden im nächsten Abschnitt deren bisherige Ergebnisse vorgestellt, bevor der derzeitige Projektfortschritt beleuchtet wird.
 
 
 \chapter{Vorarbeit}
@@ -136,7 +137,7 @@ Die aktuelle Arbeit knüpft hier an, indem der CA an geeignete Kenngrößen der 
 
 \chapter{Methodik}
 
-Während der Einarbeitungsphase erregte ein Artikel von Alberto Puliafito (2010) \cite{Puliafito} besondere Aufmerksamkeit. Dieser beschäftigt sich mit der Zellkontakthemmung, einer Eigenschaft von Zellen, das Zellwachstum und die Zellteilung ab einer bestimmten Zelldichte einzustellen. Der Artikel liefert dabei detaillierte Einblicke in das Wachstum von Nierenzellen. Da es sich bei den beobachteten Zellen um einlagige Gewebezellen handelt, eignen sie sich hervorragend für einen Vergleich mit einem zweidimensionalen zellulären Automaten. Eine genaue Auflistung, der dort entnommenen Kenngrößen, befindet sich in den Abschnitten über Eingabe- und Vergleichsparameter. \par 
+Während der Einarbeitungsphase erregte ein Artikel von Alberto Puliafito et al. (2010) \cite{Puliafito} besondere Aufmerksamkeit. Dieser beschäftigt sich mit der Zellkontakthemmung, einer Eigenschaft von Zellen, das Zellwachstum und die Zellteilung ab einer bestimmten Zelldichte einzustellen. Der Artikel liefert dabei detaillierte Einblicke in das Wachstum von Nierenzellen. Da es sich bei den beobachteten Zellen um einlagige Gewebezellen handelt, eignen sie sich hervorragend für einen Vergleich mit einem zweidimensionalen zellulären Automaten. Eine genaue Auflistung, der dort entnommenen Kenngrößen, befindet sich in den Abschnitten über Eingabe- und Vergleichsparameter. \par 
 
 Mit dem Hinzukommen der zahlreichen Kenngrößen und der damit steigenden Komplexität, wurde der Grundaufbau des CA überdacht. Im Zuge dessen wurde beschlossen, die bisherige Implementierung in eine \CS  -Anwendung zu migrieren. \par
 
@@ -157,10 +158,10 @@ Da eine 1:1 Abbildung der Realität durch die Simulation aufgrund von fehlenden 
 
 \begin{itemize}
 	\item Alle Zellen eines Zelltyps sind grundsätzlich gleich, was ihr Verhalten betrifft. Lediglich externe Bedingungen beeinflussen dieses.
-	\item Zellen besitzen eine minimale bzw. maximale Größe
-	\item Zellen sind flach
-	\item Zellen können nicht schrumpfen
-	\item Zellen können nicht sterben
+	\item Zellen besitzen eine minimale bzw. maximale Größe.
+	\item Zellen sind flach.
+	\item Zellen können nicht schrumpfen.
+	\item Zellen können nicht sterben.
 	\item Temperatur, Substrat, Nährstoffgehalt und sonstige Einflüsse werden als homogen und neutral angenommen und beeinflussen die Simulation somit nicht.
 \end{itemize}
 
@@ -179,7 +180,7 @@ Der zelluläre Automat wird durch folgende Größen definiert:
 	%\setlength\itemsep{2em}
 	\item Ein diskretes Gitter $S \subset \mathbb{Z}\textsuperscript{2}$, bestehend aus $n\textsubscript{x} \cdot n\textsubscript{y}$ Knoten, wobei $S$ ein Rechteck bildet mit Seitenlängen $n\textsubscript{x}, n\textsubscript{y} \in \mathbb{N}$. Ein Knoten wird mit $\boldsymbol{r} \in S$ bezeichnet.
 	
-	\item Die Nachbarschaften $N\textsubscript{$\boldsymbol{r}$}$, wobei jeder Knoten $\boldsymbol{r} = (x,y)$ 8 Nachbarn hat (Von-Neumann-Nachbarschaft). \par Beispiel für die Nachbarschaftsdefinition, für den im Koordinatenursprung liegenden Knoten $\vec{0} = (0,0)$: 
+	\item Die Nachbarschaften $N\textsubscript{$\boldsymbol{r}$}$, wobei jeder Knoten $\boldsymbol{r} = (x,y)$ 8 Nachbarn besitzt (Moore-Nachbarschaft). \par Beispiel für die Nachbarschaftsdefinition, für den im Koordinatenursprung liegenden Knoten $\vec{0} = (0,0)$: 
 	\[
 	N\textsubscript{$\vec{0}$} = \{(-1,0), (1,0), (-1,-1), (0,-1), (1,-1), (1,0), (1,1), (0,1)\}
 	\]
@@ -220,7 +221,7 @@ Der zelluläre Automat wird durch folgende Größen definiert:
 	
 \end{itemize}
 
-\section{Beschreibung der Dynamik}
+\section{Beschreibung der Dynamik}\label{sec: Dynamik}
 Ein Zustandswechsel im System wird wie folgt ausgeführt: \par
 \begin{enumerate}
 	\item Gleichverteilte Auswahl einer Zelle $i$
@@ -248,7 +249,8 @@ Dabei sind folgende Zellaktionen möglich: \par
 
 	Im Falle, dass beide Bedingungen erfüllt sind, kann die Zellbewegung durchgeführt werden, andernfalls wird sie verworfen. Der Zielknoten $\boldsymbol{r'}$ mit der Position $(x‘,y‘)$ wird dabei zufällig gleichverteilt aus der Menge $N_{f}$ ausgewählt. Die Zelle $i$ wird anschließend aus $\vec{v}_{\boldsymbol{r}}$ gelöscht und zu $\vec{v}_{\boldsymbol{r'}}$ hinzugefügt.
 	
-	\item Zellteilung: Analog zur Zellbewegung ist die Zellteilung an zwei notwendige Bedingungen geknüpft.
+	\item Zellteilung: Für die Zellteilung wurden zwei verschiedene Ansätze untersucht: 
+	\par Analog zur Zellbewegung ist der erste Ansatz an zwei notwendige Bedingungen geknüpft.
 	
 	\begin{enumerate}
 		\item Die Zellteilung ist an eine globale Teilungswahrscheinlichkeit $p_{d}$ gebunden, wobei $0 \leq p_{d} \leq 1$. Mit einem Zufallszahlengenerator wird eine Zufallszahl $X$ gleichverteilt erzeugt, $0 \leq X \leq 1$. Bedingung 1 ist erfüllt, wenn $X \leq p_{d}$.
@@ -269,14 +271,29 @@ Dabei sind folgende Zellaktionen möglich: \par
 	s_{i} \mapsto s_{i}/2 = s_{i‘}
 	\]
 	
+	Der zweite Ansatz ist nahezu identisch zum bisher Beschriebenen außer, dass mit keiner festen Teilungswahrscheinlichkeit gerechnet wird sondern $p_{d}$ nach folgender Formel gebildet wird:
+	
+	\[
+	p_{d} = s_{i}^m/(s_{i}^m+s_{a}^m)/c
+	\]
+	
+	Dies entspricht einer Hilltop-Funktion, wie sie in der Abbildung \ref{fig:Hillfunc} dargestellt ist. Der Parameter $s_{a}$ bestimmt den Wendepunkt des Graphen, also die Zellgröße ab der die Zellteilung beginnt rapide zu steigen, bzw. zu sinken. Die Parameter $m$ und $c$ beeinflussen die Streckung und Stauchung des Graphen. 
+	
 \end{itemize}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics{Hillfunc}
+	\caption{Hilltop-Funktion mit den Parametern m = 4, $s_{a} = 170$, c = 120}
+	\label{fig:Hillfunc}
+\end{figure}
 
 Im nächsten Kapitel werden für die hier beschriebenen Größen konkrete Werte genannt bzw. approximiert.
 
-\chapter{Biologische Kennzahlen}
-Wie bereits erwähnt, konnten viele Kenngrößen aus dem Artikel von Alberto Puliafito (2010) [3] entnommen werden. Zudem lassen sich anhand dieser neue Größen approximieren. Alle Zahlen sind mit Vorsicht zu genießen, da sie teilweise aus dem Kontext des Artikels erschlossen sind.  
+\chapter{Biologische Kennzahlen}\label{chp: Bio}
+Wie bereits erwähnt, konnten viele Kenngrößen aus dem Artikel von Alberto Puliafito et al. (2010) [3] entnommen werden. Zudem lassen sich anhand dieser neue Größen approximieren. Alle Zahlen sind mit Vorsicht zu genießen, da sie teilweise aus dem Kontext des Artikels erschlossen sind.  
 
-\section{Entnommene Kennzahlen}
+\section{Entnommene Kennzahlen}\label{sec: Entnommene Kennzahlen}
 \begin{table}[!ht]
 	\centering
 	\caption{Entnommene Kennzahlen}
@@ -305,7 +322,10 @@ Wie bereits erwähnt, konnten viele Kenngrößen aus dem Artikel von Alberto Pul
 	\end{tabularx}
 \end{table}
 
-\section{Approximierte Kennzahlen}
+Es gilt zu beachten, dass Zellgrößen zu verschiedenen Zeitpunkten der Kolonieentwicklung gemessen wurden. So beziehen sich einige der Kenngrößen auf den Zeitpunkt 20 Tage nach Ansiedlung der Kolonie (Entwickelte Kolonie) und einige auf die Größe der Ursprungszellen (Startkolonie).
+
+\newpage
+\section{Approximierte Kennzahlen}\label{sec: Approximierte Kennzahlen}
 \begin{table}[!ht]
 	\centering
 	\caption{Approximierte Kennzahlen}
@@ -322,98 +342,127 @@ Wie bereits erwähnt, konnten viele Kenngrößen aus dem Artikel von Alberto Pul
 	\end{tabularx}
 \end{table}
 
-Bemerkung:\par 
-Bei der Berechnung von (A) und (B) wurden einige vereinfachende Annahmen getroffen. Für die Berechnung von (A) wird davon ausgegangen, dass Zellen rechteckig, also nahezu gleichförmig sind. Für die Berechnung von (B) wird von einer Gleichverteilung der Zellgrößen ausgegangen.
+Bei der Berechnung von (A) und (B) wurden einige vereinfachende Annahmen getroffen. Für die Berechnung von (A) wird davon ausgegangen, dass Zellen rechteckig, also nahezu gleichförmig sind. Für die Berechnung von (B) wird von einer Gleichverteilung der Zellgrößen ausgegangen. Es ist fraglich ob diese Annahme der Realität entspricht, weswegen in der Implementierung mit teilweise stark abweichenden maximalen Zellgrößen experimentiert wurde. 
+
+Die in Abschnitt \ref{sec: Dynamik} beschriebene Wachstumsrate $\gamma \%$ musste aufgrund fehlender Informationen durch gezieltes Probieren abgeschätzt werden. Die genaue Vorgehensweise dafür wird in Kapitel \ref{chp: Datenauswertung und Ergebnisse} beschrieben. 
+
+\section{Umrechnung biologischer Kenngrößen in Wahrscheinlichkeiten}
+Da Zellaktionen wie Bewegung oder Teilung wahrscheinlichkeitsbasiert sind, müssen einige der Kennzahlen in Wahrscheinlichkeiten überführt werden. Im Folgenden wird dies exemplarisch für die Bewegungsgeschwindigkeit beschrieben. \par
+Zunächst muss eine Annahme darüber getroffen werden, wie viele Stunden realer Zeit ein MCS abdeckt. In der momentanen Implementierung wird davon ausgegangen, dass ein MCS 0,1 Stunden entspricht. Eine bekannte Kenngröße ist, dass sich Zellen ungefähr um eine Zellbreite einer ausgewachsenen Zelle pro Stunde bewegen. Da dies gleich der Kapazität eines Knotens im Gitter ist, kann ferner angenommen werden, dass durchschnittlich aller 10 MCS eine Zellbewegung durchgeführt werden muss. Somit ergibt sich eine Bewegungswahrscheinlichkeit von 10\% je MCS. \par 
+
+Im nächsten Kapitel wird beschrieben, wie das mathematische Modell in Kombination mit den biologischen Kennzahlen programmatisch umgesetzt wurde. 
 
 \chapter{Programmaufbau}
 Kernstück des Programms ist eine Simulationsklasse, die der Übernahme der Simulationsparameter und der Ablaufsteuerung dient. Die Kenngrößen und Parameter sollen später über eine entsprechende Oberfläche flexibel auswählbar und einstellbar sein, um die Simulation ohne Anpassungsaufwand unter verschiedenen Bedingungen laufen lassen zu können. Dabei ist es möglich mehrere Instanzen der Simulationsklasse gleichzeitig zu erstellen, um parallele Simulationen zu ermöglichen. \par 
 
 Der Zustandsraum wird durch ein 2D-Array aus Knoten abgebildet. Ein Knoten beinhaltet neben seiner Position und seiner Kapazität eine Liste von Zellen. \par 
 
-Eine Zelle besitzt einen Zelltyp (Nierenzelle, Krebszelle, etc.) der Auskunft über folgende Eigenschaften gibt:
-
-\begin{itemize}
-	\item Die Minimalgröße
-	\item Die Teilungswahrscheinlichkeit
-	\item Die Bewegungswahrscheinlichkeit
-	\item Die Wachstumsrate
-\end{itemize}
-
 Die Zellaktionen (Bewegung, Teilung, Wachstum) werden jeweils durch Funktionen einer Zelle repräsentiert. Zusätzlich besitzt jede Zelle eine lokale Größe.
 
-Wie bereits erwähnt, konnten viele Kenngrößen aus dem Artikel von Alberto Puliafito (2010) [3] entnommen werden. Diese können entweder als Eingabeparameter für den CA dienen, oder als Vergleichswerte für die resultierenden Ergebnisse. Da mit vielen Wahrscheinlichkeiten gearbeitet wird, müssen einige der Kenngrößen umgerechnet werden. Dies wird am Ende des Kapitels am Beispiel der Bewegungsgeschwindigkeit verdeutlicht. Es gilt zu erwähnen, dass noch nicht alle hier aufgelisteten Parameter im jetzigen Stand des CA implementiert sind. Zudem sind einige der Parameter aufgrund fehlender Informationen approximiert.
+Die im Kapitel Mathematisches Modell angesprochenen Größen finden sich zusammen mit den biologischen Kennzahlen aus dem vorherigen Kapitel in einer globalen Klasse wieder. Diese Klasse enthält zusätzlich Parameter, welche Einfluss auf die Ablaufsteuerung sowie die Datengenerierung haben. Dadurch können verschiedene Szenarien simuliert werden, wie z.B. das Beobachten einer isolierten einzelnen Zelle oder im Kollektiv mit anderen Zellen. Mehr dazu im Abschnitt Datengenerierung.
 
-\section{Eingabeparameter}
-Die Simulation hängt von vordefinierten Parametern ab, die entweder zwingend notwendig (Teilungswahrscheinlichkeit, Bewegungswahrscheinlichkeit, etc.) oder optional (z.B. Energielevel oder Teilungslevel) sein können.
-
-
-
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
-\begin{table}[!ht]
-	\centering
-	\caption{Eingabeparameter}
-	\label{my-label}
-	\begin{tabularx}{\textwidth}{lX}
-		\toprule
-		\textbf{Parameter}             & \textbf{Bemerkung}                                                                                                                                                                                                                             \\ \midrule
-		Knotenanzahl                   & Definiert die Zustandsraumgröße                                                                                                                                                                                                                \\
-		Gitterabstand                  & Breite einer ausgewachsenen Zelle ($Gitterabstand^2$ gibt die Größe einer Ausgewachsenen Zelle an)                                                                                                                                                \\
-		Zeitschrittlänge               & Gibt an wie viele Stunden Echtzeit pro MCS vergehen                                                                                                                                                                                            \\
-		Anfangssituation               & Immer gleich aber mit zwei Varianten. Entweder volles Rechteck im Zentrum, oder X\% des gesamten Grids gefüllt (zufällige Verteilung)                                                                                                          \\
-		Zellteilungswahrscheinlichkeit & Siehe Abschnitt Zellaktionen                                                                                                                                                                                                                   \\
-		Bewegungswahrscheinlichkeit    & Siehe Abschnitt Zellaktionen                                                                                                                                                                                                                   \\
-		Zellwachstumsrate              & Siehe Abschnitt Zellaktionen                                                                                                                                                                                                                   \\
-		Energielevel                   & Eingeengte Zellen schicken Signale an ihre Nachbarzellen und erhöhen damit deren Energielevel. Ein erhöhtes Energielevel sorgt für eine Priorisierung der Bewegung gegenüber anderer Zellaktionen. (Erster Ansatz für Verdrängungsmechanismen) \\
-		Teilungslevel                  & Ist maximal nachdem sich eine Zelle geteilt hat und wird in jedem Zeitschritt gesenkt. Ein erhöhtes Teilungslevel sorgt für eine Senkung der Teilungswahrscheinlichkeit.                                                                       \\ \bottomrule
-	\end{tabularx}
-\end{table}
-
-\section{Vergleichsparameter}
-Um die Ergebnisse verschiedener Simulationsdurchläufe miteinander vergleichen zu können, müssen Vergleichsparameter definiert werden. 
-
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
-\begin{table}[!ht]
-	\centering
-	\caption{Vergleichsparameter}
-	\label{my-label}
-	\begin{tabularx}{\textwidth}{lX}
-		\toprule
-		Parameter                             & Bemerkung                                  \\ \midrule
-		Durchschnittliche Zellgeschwindigkeit & -                                          \\
-		Koloniefläche                         & Summe der belegten Kapazitäten aller Knoten \\
-		Zelldichte                            & Koloniefläche im Verhältnis zur Zellanzahl \\ \bottomrule
-	\end{tabularx}
-\end{table}
-
-\section{Umrechnung biologischer Kenngrößen in Wahrscheinlichkeiten}
-Zunächst muss eine Annahme darüber getroffen werden, wie viele Stunden realer Zeit ein MCS abdeckt. In der momentanen Implementierung wird davon ausgegangen, dass ein MCS 0,1 Stunden entspricht. Eine bekannte Kenngröße ist, dass sich Zellen ungefähr um eine Zellbreite einer ausgewachsenen Zelle pro Stunde bewegen. Da dies gleich der Kapazität eines Knotens im Gitter ist, kann ferner angenommen werden, dass durchschnittlich aller 10 MCS eine Zellbewegung durchgeführt werden muss. Somit ergibt sich eine Bewegungswahrscheinlichkeit von 10\% je MCS. \par 
+Der Programmablauf bildet die im Kapitel \ref{sec: Dynamik} beschriebene Dynamik ab. Zum Programmstart werden zunächst alle Verzeichnisse geleert in denen später Daten gespeichert werden sollen. Anschließend wird der Zustandsraum initialisiert. Dies umfasst das Anlegen des Grids aus Knoten, sowie die Initialisierung der Startkolonie. Dabei gibt es zwei Optionen. Entweder ein quadratischer Bereich im Zentrum der Kolonie wird vollständig mit Zellen befüllt oder eine bestimmte Anzahl Startzellen wird zufällig gleichverteilt in einem definierten Field of View des Grids angesiedelt. Das Field of View ist dabei eine Analogie zum Sichtfeld eines Mikroskops in der Realität.\par Nach der Initialisierung wird eine Funktion mit zwei ineinander geschachtelten Schleifen aufgerufen. Diese Funktion enthält die eigentliche Simulationslogik. Die erste Schleife läuft dabei bis zur Anzahl angegebener Monte-Carlo-Schritte, die zweite Schleife läuft bis zur Anzahl der Zellen zu Beginn des MCS*3. In der inneren Schleife läuft nun die in \ref{sec: Dynamik} beschriebene Logik für die Zustandswechsel im CA ab. Für jeden äußeren Schleifendurchlauf wird auf Wunsch der komplette Grid -bzw. Field of View- Zustand abgespeichert. 
 
 Nachdem der Programmablauf erläutert wurde, wird im folgenden Abschnitt die Ausgabe des Programms beschrieben.
 
 
 \section{Datengenerierung und Auswertung}
-Für erste statistische Auswertungen wurde eine statische Klasse Statistics angelegt, in der zur Laufzeit Daten gesammelt werden. Momentan dient die Klasse lediglich zu Testzwecken. Unter anderem ermittelt sie die Anzahl der versuchten Teilungen, sowie die Anzahl der tatsächlich durchgeführten Teilungen. Damit kann nachvollzogen werden ob der Zufallsgenerator eine korrekte Gleichverteilung erzeugt und ob die angegebene Teilungswahrscheinlichkeit eingehalten wird. \par 
-
-Abhängig vom gewählten Darstellungsmodus wird der komplette Simulationszustand aller \textit{X} Zeitschritte in eine CSV-Datei gespeichert. \par 
-
-Die Darstellung der Daten erfolgt über MATLAB/Octave. Je nach Datenmenge können dabei verschiedene Ergebnisse erzielt werden:
+Wie bereits im vorherigen Abschnitt erwähnt, werden während jedem MCS verschiedenste Daten generiert. Diese werden im CSV-Format abgespeichert um später mittels MATLAB/Octave analysiert und visualisiert zu werden. Momentan werden in jedem MCS folgende Daten aufgenommen:
 
 \begin{itemize}
-	\item Animation: Jeder Simulationsschritt wird abgebildet.
-	\item Snapshot: Ein bestimmter Zeitschritt wird als Bild dargestellt.
-	\item Overlap: Die Bilder von \textit{X} Zeitschritten werden übereinandergelegt. (Analog zu Abbildung \ref{fig:Zellflaeche})
+	\item Der Zustand aller Knoten im Grid bzw. Field of View
+	\item Die Größe einer bestimmten oder aller Zellen
+	\item Die gesamte Koloniegröße
 \end{itemize}
 
+Anhand dieser Daten können diverse Untersuchungen vorgenommen werden. Wie genau dabei vorgegangen wurde und welche Ergebnisse dabei entstanden sind, wird im nächsten Kapitel beschrieben.
+
+%\begin{itemize}
+%	\item Animation: Jeder Simulationsschritt wird abgebildet.
+%	\item Snapshot: Ein bestimmter Zeitschritt wird als Bild dargestellt.
+%	\item Overlap: Die Bilder von \textit{X} Zeitschritten werden übereinandergelegt. (Analog zu Abbildung \ref{fig:Zellflaeche})
+%\end{itemize}
+%
+%\begin{figure}[!ht]
+%	\centering
+%	\includegraphics{ZellflaecheJeK}
+%	\caption{Overlap einer Nierenzellenkolonie [3]}
+%	\label{fig:Zellflaeche}
+%\end{figure}
+
+\chapter{Datenauswertung und Ergebnisse}\label{chp: Datenauswertung und Ergebnisse}
+Ausgehend von den biologischen Kennzahlen aus Kapitel \ref{chp: Bio} wurde versucht ähnliches Zellverhalten wie im Artikel von Alberto Puliafito et al. (2010) [3] zu beobachten. Grundlage für einen Vergleich bildeten dabei grafisch dargestellte Messwerte aus dem Artikel. Da keine konkreten Messwerte angegeben wurden, war zunächst nur ein visueller Vergleich zwischen den vom CA generierten Daten und den Messwerten möglich. Konkret verglichen wurden:
+
+\begin{itemize}
+	\item Die Koloniefläche
+	\item Die Kolonieform
+	\item Die Zelldichte im Field of View
+	\item Der Median der Zellgrößen im Field of View
+\end{itemize}
+
+Bevor mit der Datengenerierung begonnen werden konnte, musste wie bereits im Abschnitt \ref{sec: Approximierte Kennzahlen} beschrieben, ein konkreter Wert für die Wachstumsrate $\gamma$ bestimmt werden. Zunächst wird davon ausgegangen, dass Zellen exponentiell wachsen. Zudem ist bekannt, dass die Zellteilungsrate unter einer Größe von $170 \mu m^2$ rapide absinkt und der durchschnittliche Zellzyklus ungefähr 18 Stunden dauert (siehe \ref{sec: Entnommene Kennzahlen}). Mit diesem Wissen wurden verschieden Simulationsdurchläufe gestartet. Dabei wurde das Programm so konfiguriert, dass nur eine einzelne Zelle beobachtet wurde, welche unendlich viel Platz zur Verfügung hatte. Die Bewegung der Zelle wurde deaktiviert, womit sie sich nur noch teilen und wachsen konnte. Für die Teilungswahrscheinlichkeit wurde die in Abschnitt \ref{sec: Dynamik} beschriebene Hilltop-Funktion genutzt. Die Simulationszeit betrug 48000 MCS also umgerechnet 200 Tage. Für jeden Simulationsdurchlauf wurde dabei eine andere Wachstumsrate genutzt und schließlich wurde ein Simulationsergebnis gesucht, welches am ehesten die Zellzykluszeit von 18 Tagen widerspiegelte. 
+
+Anhand dieser Vorgehensweise wurde eine Wachstumsrate $\gamma = 0.0038$ \% ermittelt. Die Simulation ergab dabei eine Zellzykluszeit von 18,23 Stunden. Abbildung \ref{fig:Wachstumsratenabschätzung} stellt das Ergebnis graphisch dar. Es ist gut zu erkennen, dass die durchschnittliche Zellgröße fast über den kompletten Simulationszeitraum um die rechnerisch ermittelte Durchschnittsgröße oszilliert. Zudem bleibt sie bis auf kleine Ausnahmen unter der berechneten maximalen Zellgröße. Die seltenen Ausnahmen lassen sich damit begründen, dass es sich um Zufallsexperimente handelt und das exponentielle Wachstum zu sehr großen Zellen führen kann, falls einige Zeitschritte hintereinander keine Teilung ausgeführt wurde. 
+
+\newpage
+
 \begin{figure}[!ht]
+	\vspace{2cm}
 	\centering
-	\includegraphics{ZellflaecheJeK}
-	\caption{Overlap einer Nierenzellenkolonie [3]}
-	\label{fig:Zellflaeche}
+	\includegraphics{MedianSingleCell}
+	\caption{Größe einer einzelnen Zelle im Verlauf von 200 Tagen. }
+	\label{fig:Wachstumsratenabschätzung}
 \end{figure}
 
-\chapter{Ergebnisse und Ausblick}
+Nachdem mit der Wachstumsrate der letzte unbekannte Parameter für den CA bestimmt wurde, konnten die generierten Daten verarbeitet und evaluiert werden. Die Ergebnisse werden in den nächsten Abschnitten präsentiert.
+
+\section{Vergleich der Koloniefläche}
+
+Abbildung \ref{fig:Koloniegroesse} stellt die gemessene und die simulierte Koloniefläche gegenüber. Beide Graphen sind gleich skaliert wobei die Zeitachse der Simulation in MCS statt Tagen angegeben ist. Es ist zu sehen, dass die simulierten Ergebnisse dabei erstaunlich nah an der Realität sind. Sowohl Kurvenverlauf als auch Zellfläche stimmen beinahe überein. 
+
+\begin{figure}[!ht]
+	\subfigure[Tatsächlich beobachtete Koloniefläche ]{\includegraphics[width=0.5\textwidth]{TotalArea}\label{fig:KoloniegroesseExperiment}} 
+	\subfigure[Simulierte Koloniefläche ]{\includegraphics[width=0.5\textwidth]{colonySize}\label{fig:KoloniegroesseCA}} 
+	\caption{Vergleich der Koloniefläche} 
+	\label{fig:Koloniegroesse}
+\end{figure} 
+
+\newpage
+\section{Vergleich der Kolonieform}
+Die Betrachtung der Kolonieform zeigt noch deutlichen Verbesserungsbedarf des CA auf. Abbilung a) stellt verschiedene Stadien der Kolonieentwicklung dar. Dabei wurden in regelmäßigen Abständen Aufnahmen der Kolonie gemacht und diese übereinander gelegt. Auffällig ist dabei die unregelmäßige Form. Man spricht von einer Fingerbildung. Diese fehlt im Simulationsergebnis b) vollständig. Dies lässt sich damit begründen, dass die Kolonieform hauptsächlich von der Zellbewegung geprägt wird. Da diese in der Simulation gleichverteilt ist und noch keine Verdrängungsprozesse implementiert wurden, die für unregelmäßige Ausdehnung sorgen könnten, entsteht ein gleichförmiger Kreis. 
+
+\begin{figure}[!ht]
+	\subfigure[Tatsächlich beobachtete Kolonieform ]{\includegraphics[width=0.5\textwidth]{ZellflaecheJeK}\label{fig:KoloniegroesseExperiment}} 
+	\subfigure[Simulierte Kolonieform ]{\includegraphics[width=0.5\textwidth]{Kolonieform}\label{fig:KoloniegroesseCA}} 
+	\caption{Vergleich der Kolonieform} 
+	\label{fig:Kolonieform}
+\end{figure} 
+
+\newpage
+\section{Vergleich der Zelldichte}
+Abbildung \ref{fig:Zelldichte} stellt die gemessene und die simulierte Zelldichte im Field of View gegenüber. Das Ende des Beobachtungszeitraums von 10 Tagen ist im Graph der Simulation durch die orangene Linie markiert. Wie bei der Koloniefläche sieht auch hier der Kurvenverlauf beider Graphen ähnlich aus. Die simulierte Zellanzahl ist jedoch viel geringer als die beobachtete Anzahl. Es wäre denkbar, dass die maximale Knotengröße zu klein gewählt wurde und die Zellen somit nicht genügend Kapazität zur Verfügung hatten. Wie bereits in Abschnitt \ref{sec: Approximierte Kennzahlen} erwähnt fehlen momentan noch Informationen über die maximale Zellgröße und somit über die Knotengröße.
+
+\begin{figure}[!ht]
+	\subfigure[Tatsächlich beobachtete Zelldichte ]{\includegraphics[width=0.7\textwidth]{Celldensity}\label{fig:KoloniegroesseCA}}
+	\subfigure[Simulierte Zelldichte ]{\includegraphics{CelldensityColony}\label{fig:KoloniegroesseExperiment}}  
+	\caption{Vergleich der Zelldichte im Field of View} 
+	\label{fig:Zelldichte}
+\end{figure} 
+
+\newpage
+\section{Vergleich der Zellgrößen}
+Der Vergleich der Zellgrößen im Field of View zeigt deutliche Unterschiede zwischen Realität und Simulation. Die orangene Linie in Abbildung b) markiert diesmal den Tag 0 in Abbildung a). Der Median der Zellgrößen nimmt zwar mit steigender Simulationsdauer ebenfalls ab, allerdings wachsen die Zellen nie über eine Zellgröße von 200 $\mu m^2$. Auch hier könnte die Ursache eine zu klein gewählte Knotengröße sein oder ein zu geringer Wachstumsfaktor.
+
+\begin{figure}[!ht]
+	\subfigure[Tatsächlich beobachtete Zellgrößen ]{\includegraphics[width=0.7\textwidth]{CellSizes}\label{fig:KoloniegroesseCA}}
+	\subfigure[Simulierte Zellgrößen ]{\includegraphics{MedianColony}\label{fig:KoloniegroesseExperiment}}  
+	\caption{Vergleich der Zellgrößen im Field of View} 
+	\label{fig:Zellgroessen}
+\end{figure} 
+
+
+
+\chapter{Ausblick}
 Im Laufe des Semesters konnte die Zielstellung des Projekts eingegrenzt werden. Die Kenngrößen aus dem im Kapitel Methodik beschriebenen Artikel liefern ein konkretes Ziel für die Entwicklung des zellulären Automaten. In seiner momentan noch prototypischen Form kann der CA erste Daten generieren und für die Weiterverarbeitung speichern. Eine Visualisierung der Daten mittels MATLAB befindet sich bereits in der Entwicklung. \par 
 Im nächsten Schritt soll die Funktionsweise der prototypischen Implementierung mittels Sensibilitätstests auf ihre Richtigkeit geprüft werden. Konkret bedeutet dies, einzelne Simulationskomponenten zu isolieren und zu testen. \par 
 Anschließend soll die Laufzeit des CA mit einer für eine Zellkolonie realistischen Zellanzahl getestet werden. Eine Prüfung des Parallelisierungsgrad sollte damit einhergehen. Sollten zusätzliche Geschwindigkeitsoptimierungen nötig sein, wäre eine parallelisierte Aktualisierung der Knoten innerhalb eines Zeitschritts denkbar indem der Zustandsraum auf einzelne Prozessoren aufgeteilt wird. \par 
